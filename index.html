@@ -35,7 +35,7 @@
 <button class="btn" id="b1" onclick="copyPrompt('p1','b1','Copy Part 1')">Copy Part 1</button>
 <pre id="p1">Instructions for the AI: Help me build a personal food style profile. Interview me first, then write the profile.
 
-How to interview me: Ask the questions below in four short rounds. Ask one round at a time and wait for my answers before moving on. Keep your wording short and friendly. If I skip a question or say "not sure," move on without pushing. Start with Round 1.
+How to interview me: Start with a friendly one-line welcome and keep the tone light and encouraging throughout. Ask the questions below in four short rounds. Ask one round at a time and wait for my answers before moving on. Keep your wording short. End each round with a quick, encouraging comment about what I shared. If I skip a question or say "not sure," move on without pushing. Start with Round 1.
 
 Round 1, about me and my kitchen:
 - What is my name?
@@ -49,6 +49,7 @@ Round 2, what I eat:
 - Any allergies or intolerances that are a hard no for health reasons (nuts, shellfish, gluten, dairy, etc.)?
 - Any religious or ethical practices that matter to me (kosher, halal, vegan, vegetarian, or others)?
 - Optional, and I can skip it: is there anything I'm managing that shapes how I eat, without needing to go into detail?
+- Optional, and I can skip it: do I have daily protein or fiber targets from a doctor or dietitian? If so, what are they? If not, I'll say "no targets."
 
 Round 3, my taste:
 - Which cuisines make me genuinely excited to eat? Any that can stay far, far away from my plate?
@@ -60,11 +61,11 @@ Round 4, my day-to-day:
 - What do I typically eat for breakfast, or wish I ate if mornings weren't chaos?
 - Snacks: do I graze all day, or am I a three-square-meals purist?
 - Food quality: do I care about minimally processed, organic, or farm-to-table food, or is that a someday problem?
-- Practical stuff: budget, where I usually shop, and kitchen equipment I actually use (versus the appliance graveyard in my cabinet).
+- Practical stuff: my budget and where I usually shop.
 
-After Round 4, build my profile. Include my dietary pattern, favorite cuisines, meal structure, and any goals I mentioned. Where it fits naturally, favor meals with good fiber and a solid amount of fruits and vegetables, without making that the main focus unless I specifically asked for it. Keep suggestions practical and matched to the time and skill I told you I have. Write the profile with warmth and a little personality. It should feel like it was built by someone who actually enjoys food, not like a nutrition label.
+After Round 4, build my profile. Include my dietary pattern, favorite cuisines, meal structure, any goals I mentioned, and any protein or fiber targets I gave you. Do not set targets for me. If I said I have none, do not bring up numbers. Where it fits naturally, favor meals with good fiber and a solid amount of fruits and vegetables, without making that the main focus unless I specifically asked for it. Keep suggestions practical and matched to the time and skill I told you I have. Write the profile with warmth and a little personality. It should feel like it was built by someone who actually enjoys food, not like a nutrition label.
 
-When the profile is done, tell me to save it as its own document, note, or file. Next time I want a new meal plan, I can paste this profile in instead of answering the questions again. Then offer me a sample day of meals, a shopping list, or to adjust anything that doesn't feel like me yet.</pre>
+When the profile is done, tell me to save it as its own document, note, or file. If my AI tool has projects or folders (for example ChatGPT Projects or Claude Projects), suggest I create one for meal planning and keep my profile and my first meal plan there, so future plans start from them without re-pasting. Then offer me a sample day of meals, a shopping list, or to adjust anything that doesn't feel like me yet.</pre>
 
 <h2>Part 2: 3-Day Meal Plan</h2>
 <p>Use this right after your profile is built, in the same conversation. If you're starting a new conversation, or it's been a while, paste your saved food style profile in first, then this prompt.</p>
@@ -79,7 +80,9 @@ Then build the plan with these rules:
 - Make it seasonal for right now, based on where I live.
 - Keep meals within the time limit I gave in my profile.
 - Portion each recipe for the household size I gave.
+- Assume a standard home kitchen unless my profile says otherwise.
 - Favor good fiber and a solid amount of fruits and vegetables where it fits naturally, without making that the main focus.
+- If my profile includes protein or fiber targets, aim for them each day and show a rough total per day, noting that it is an estimate. If my profile has no targets, do not mention numbers or set any for me.
 - Vary the cuisines, proteins, and cooking methods across the three days rather than repeating the same style or technique more than once.
 - Match how adventurous I said I want to be in my profile. If I said I want to stay close to what I know, keep things familiar with small variation. If I said I want to be pushed, include at least one meal that is a genuine stretch from my usual pattern.
 - If my dietary pattern is plant-based or I eat mostly plant-based proteins, draw from a wide range across the plan rather than repeating the same one or two: beans, lentils, tofu, tempeh, and edamame, plus eggs, yogurt, and cottage cheese if I said I eat those, and nuts, seeds, and nut butters worked in where they fit naturally. Include at least one plant-based meat alternative as an option in the plan, noting that it is a processed substitute rather than a whole-food protein.
@@ -91,10 +94,10 @@ For each meal, give me:
 
 After the 3-day plan, give me a shopping list grouped by grocery store section (produce, meat and seafood, dairy, frozen, pantry, etc.), not just by food category.
 
-Finally, remind me to save this plan as its own document, alongside my food style profile.</pre>
+Finally, remind me to save this plan next to my food style profile, in my meal planning project or folder if I made one.</pre>
 
 <h2>Next time</h2>
-<p>Come back to this page, open a new chat, and paste in your saved food style profile and your last meal plan, then Part 2. Tell the AI one of two things:</p>
+<p>Keep your food style profile and your first meal plan together in a project, folder, or note (ChatGPT and Claude both offer Projects). Next time, open that project and paste in Part 2, or come back to this page for it. Tell the AI one of two things:</p>
 <ol>
   <li><b>"Give me something different from this"</b> for new meals, cuisines, and proteins.</li>
   <li><b>"Give me something similar to this"</b> for a plan close to what you liked, with small variation.</li>
