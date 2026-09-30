@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Food Style Profile + Meal Plan Prompt</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; margin: 0; background: #faf8f6; color: #1c1c1c; line-height: 1.5; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 24px 18px 48px; }
+  h1 { font-size: 26px; line-height: 1.2; margin: 0 0 8px; color: #b3122d; }
+  h2 { font-size: 20px; margin: 32px 0 6px; color: #3b5b78; }
+  p { margin: 8px 0; font-size: 17px; }
+  ol { padding-left: 22px; font-size: 17px; }
+  li { margin-bottom: 8px; }
+  .btn { display: block; width: 100%; min-height: 56px; font-size: 19px; font-weight: 700; color: #fff; background: #b3122d; border: 0; border-radius: 10px; margin: 12px 0 10px; cursor: pointer; }
+  .btn.done { background: #2e7d32; }
+  pre { white-space: pre-wrap; word-wrap: break-word; font-family: inherit; font-size: 15px; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 12px; max-height: 240px; overflow-y: auto; margin: 0; }
+  .note { font-size: 14px; color: #555; margin-top: 36px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Build Your Food Style Profile + 3-Day Meal Plan</h1>
+<p>Tell us how you actually like to eat. We'll turn it into a meal plan that doesn't taste like a spreadsheet. Two steps, about five minutes, real recipes at the end. No kale-shaming, we promise.</p>
+
+<h2>How to use this</h2>
+<ol>
+  <li>Open ChatGPT, Claude, Gemini, or the AI tool of your choice.</li>
+  <li>Tap <b>Copy Part 1</b> below, paste it into the chat, and send it. The AI will ask you a few short questions at a time. Just answer them.</li>
+  <li>When your profile is built, save it as its own note or document. Then, in the same conversation, tap <b>Copy Part 2</b>, paste it in, and send it.</li>
+</ol>
+
+<h2>Part 1: Food Style Profile</h2>
+<button class="btn" id="b1" onclick="copyPrompt('p1','b1','Copy Part 1')">Copy Part 1</button>
+<pre id="p1">Instructions for the AI: Help me build a personal food style profile. Interview me first, then write the profile.
+
+How to interview me: Ask the questions below in four short rounds. Ask one round at a time and wait for my answers before moving on. Keep your wording short and friendly. If I skip a question or say "not sure," move on without pushing. Start with Round 1.
+
+Round 1, about me and my kitchen:
+- What is my name?
+- What am I hoping this helps with? For example: more energy, simpler cooking, fewer "what's for dinner" panic spirals, eating less takeout, feeling better after meals, or just wanting someone else to think about food for once.
+- Household: how many people am I feeding, and do I want leftovers or want to avoid them?
+- Time: on a normal day, how long am I realistically willing to stand at a stove?
+- How would I describe myself in the kitchen? Still figuring out the stove, comfortable and capable, or the person my friends call for dinner party advice?
+
+Round 2, what I eat:
+- Do I eat meat? Which kinds? If I am plant-based or mostly plant-based, which proteins do I actually eat: beans, lentils, tofu, tempeh, edamame, eggs, dairy like yogurt or cottage cheese, plant-based meat substitutes? Anything on that list I avoid or dislike?
+- Any allergies or intolerances that are a hard no for health reasons (nuts, shellfish, gluten, dairy, etc.)?
+- Any religious or ethical practices that matter to me (kosher, halal, vegan, vegetarian, or others)?
+- Optional, and I can skip it: is there anything I'm managing that shapes how I eat, without needing to go into detail?
+
+Round 3, my taste:
+- Which cuisines make me genuinely excited to eat? Any that can stay far, far away from my plate?
+- Is there anything I want worked in every chance you get, or anything that ends the meal for me if it shows up?
+- Spice level: mild, medium, or "I have a complicated relationship with my own tongue"?
+- Adventurousness: on a scale from "don't mess with my go-to dinner" to "surprise me, I'll try anything once," where do I land?
+
+Round 4, my day-to-day:
+- What do I typically eat for breakfast, or wish I ate if mornings weren't chaos?
+- Snacks: do I graze all day, or am I a three-square-meals purist?
+- Food quality: do I care about minimally processed, organic, or farm-to-table food, or is that a someday problem?
+- Practical stuff: budget, where I usually shop, and kitchen equipment I actually use (versus the appliance graveyard in my cabinet).
+
+After Round 4, build my profile. Include my dietary pattern, favorite cuisines, meal structure, and any goals I mentioned. Where it fits naturally, favor meals with good fiber and a solid amount of fruits and vegetables, without making that the main focus unless I specifically asked for it. Keep suggestions practical and matched to the time and skill I told you I have. Write the profile with warmth and a little personality. It should feel like it was built by someone who actually enjoys food, not like a nutrition label.
+
+When the profile is done, tell me to save it as its own document, note, or file. Next time I want a new meal plan, I can paste this profile in instead of answering the questions again. Then offer me a sample day of meals, a shopping list, or to adjust anything that doesn't feel like me yet.</pre>
+
+<h2>Part 2: 3-Day Meal Plan</h2>
+<p>Use this right after your profile is built, in the same conversation. If you're starting a new conversation, or it's been a while, paste your saved food style profile in first, then this prompt.</p>
+<button class="btn" id="b2" onclick="copyPrompt('p2','b2','Copy Part 2')">Copy Part 2</button>
+<pre id="p2">Instructions for the AI: Using my food style profile above, build me a 3-day meal plan with breakfast, lunch, and dinner for each day.
+
+Before you start, ask me two quick questions and wait for my answers:
+1. Where do I live (city or region), so you can make the plan seasonal?
+2. Is anything different about this specific week? For example: busier than usual, cooking for guests, or wanting to repeat a favorite. I can say "nothing" if it's a normal week.
+
+Then build the plan with these rules:
+- Make it seasonal for right now, based on where I live.
+- Keep meals within the time limit I gave in my profile.
+- Portion each recipe for the household size I gave.
+- Favor good fiber and a solid amount of fruits and vegetables where it fits naturally, without making that the main focus.
+- Vary the cuisines, proteins, and cooking methods across the three days rather than repeating the same style or technique more than once.
+- Match how adventurous I said I want to be in my profile. If I said I want to stay close to what I know, keep things familiar with small variation. If I said I want to be pushed, include at least one meal that is a genuine stretch from my usual pattern.
+- If my dietary pattern is plant-based or I eat mostly plant-based proteins, draw from a wide range across the plan rather than repeating the same one or two: beans, lentils, tofu, tempeh, and edamame, plus eggs, yogurt, and cottage cheese if I said I eat those, and nuts, seeds, and nut butters worked in where they fit naturally. Include at least one plant-based meat alternative as an option in the plan, noting that it is a processed substitute rather than a whole-food protein.
+- Write with some personality. A little humor is welcome. Food should feel like a pleasure here, not a compliance exercise.
+
+For each meal, give me:
+- A full recipe with ingredients and numbered steps
+- Roughly how long it takes
+
+After the 3-day plan, give me a shopping list grouped by grocery store section (produce, meat and seafood, dairy, frozen, pantry, etc.), not just by food category.
+
+Finally, remind me to save this plan as its own document, alongside my food style profile.</pre>
+
+<h2>Next time</h2>
+<p>Come back to this page, open a new chat, and paste in your saved food style profile and your last meal plan, then Part 2. Tell the AI one of two things:</p>
+<ol>
+  <li><b>"Give me something different from this"</b> for new meals, cuisines, and proteins.</li>
+  <li><b>"Give me something similar to this"</b> for a plan close to what you liked, with small variation.</li>
+</ol>
+<p>Either way, no re-answering the questions. That's the whole point.</p>
+
+<p class="note">This tool is for general wellness and educational purposes only. It is not medical advice, a medical device, or a substitute for individualized care from your own physician or registered dietitian.<br><br>Created by Angela Thyer, MD and Judy Simon, RDN. For personal use only.</p>
+
+</div>
+<script>
+function copyPrompt(preId, btnId, label) {
+  var text = document.getElementById(preId).textContent;
+  var btn = document.getElementById(btnId);
+  function ok() {
+    btn.textContent = "Copied! Now paste it into your AI";
+    btn.className = "btn done";
+    setTimeout(function () { btn.textContent = label; btn.className = "btn"; }, 3000);
+  }
+  function fallback() {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try { document.execCommand("copy"); ok(); } catch (e) { btn.textContent = "Press and hold the text below to copy"; }
+    document.body.removeChild(ta);
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(ok, fallback);
+  } else {
+    fallback();
+  }
+}
+</script>
+</body>
+</html>
